@@ -14,9 +14,8 @@ end
 def directors_totals(nds)
   result = {}
   nds.each do |director_info|
-    director_name = director_info[:name]
     total_director_gross = gross_for_director(director_info)
-    result[director_name] = total_director_gross
+    result[director_info[:name]] = total_director_gross
   end
   result
 end
